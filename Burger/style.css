@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+		font-family: Montserrat;
+		src: url('font-Montserrat/Montserrat-Black.ttf') format('ttf'),
+         url('font-Montserrat/Montserrat-Bold.ttf') format('ttf'),
+         url('font-Montserrat/Montserrat-ExtraBold.ttf') format('ttf'),
+         url('font-Montserrat/Montserrat-Regular.ttf') format('ttf'),
+				 url('font-Montserrat/Montserrat-Medium.ttf') format('ttf');
+		font-display: swap;
+	}
+
+@keyframes text_change {
+  0%,
+  100% {
+    color: white; }
+  50% {
+    color: black; } }
+
+@keyframes background_change {
+  0%,
+  100% {
+    color: white;
+    background: red; }
+  50% {
+    border: 0.2rem solid darkgoldenrod;
+    background-color: darkgoldenrod;
+    color: black; } }
+
+body {
+  font-size: 1.2rem;
+  font-family: 'Montserrat-Medium', 'Roboto mono', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  body header {
+    width: 100vw;
+    padding: 5rem;
+    background: linear-gradient(to bottom, orange, white); }
+    body header nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6rem; }
+      body header nav .logo svg {
+        position: relative;
+        top: 11px; }
+      body header nav .menu {
+        list-style: none;
+        display: flex;
+        gap: 6rem; }
+        body header nav .menu li a {
+          font-size: 1.75rem;
+          color: black;
+          text-decoration: none;
+          transition: all 0.5s ease; }
+          body header nav .menu li a:hover {
+            animation: text_change 2s linear infinite;
+            font-weight: 700;
+            color: white; }
+    body header .header-description {
+      display: flex;
+      justify-content: center; }
+      body header .header-description .order {
+        margin-right: 1rem;
+        margin-top: 10rem; }
+        body header .header-description .order h1 {
+          font-size: 3rem;
+          margin-bottom: 2rem; }
+        body header .header-description .order p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem; }
+        body header .header-description .order div {
+          font-size: 1.5rem;
+          cursor: pointer;
+          text-align: center;
+          padding: 1rem;
+          max-width: 12rem;
+          background-color: red;
+          color: white;
+          border-radius: 2rem;
+          border: 0.2rem solid red; }
+          body header .header-description .order div:hover {
+            animation: background_change 2s linear infinite; }
+  body section {
+    width: 1600px;
+    margin-bottom: 2rem; }
+    body section .menu-title {
+      margin-bottom: 3rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 3rem; }
+    body section .menu-blocks {
+      justify-content: center;
+      flex-wrap: wrap;
+      display: flex;
+      text-align: center;
+      gap: 2rem; }
+      body section .menu-blocks .menu-item img:hover {
+        background-color: orange; }
+  body footer {
+    background: linear-gradient(to bottom, white, orange);
+    padding-top: 5rem;
+    width: 100vw;
+    text-align: center; }
+    body footer .footer-links {
+      margin-bottom: 2rem;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      display: flex; }
+      body footer .footer-links li {
+        cursor: pointer; }
+        body footer .footer-links li:hover {
+          animation: text_change 3s linear infinite; }
+    body footer p {
+      cursor: pointer;
+      margin-bottom: 2rem; }
+      body footer p:hover {
+        animation: text_change 2s linear infinite; }
